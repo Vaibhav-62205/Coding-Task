@@ -1,16 +1,158 @@
-# React + Vite
+# ⭐ Star Wars Characters Explorer (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that fetches Star Wars character data from the public **SWAPI API** and displays it in a clean card layout with pagination, modal details, loading states, and URL-synced navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* Fetches data from the public REST API
+  👉 https://swapi.dev/api/people
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Shows characters in a **3 × 3 card grid (9 per page)**
 
-## Expanding the ESLint configuration
+* Pagination synced with URL (`?page=2`)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Loading spinner while fetching data
+
+* Error handling if API fails
+
+* Animated hover cards
+
+* Click a card to open a **details modal**
+
+* Character details include:
+
+  * Name
+  * Height in meters
+  * Mass in kg
+  * Birth year
+  * Number of films
+  * Date added (dd-MM-yyyy format)
+
+* Dark gradient UI theme
+
+* Clean component-based architecture
+
+---
+
+## 🧱 Tech Stack
+
+* React (Vite)
+* React Hooks
+* React Router DOM
+* CSS (custom styling)
+* REST API integration using `fetch`
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │   ├── Card.jsx
+ │   ├── Modal.jsx
+ │   ├── Loader.jsx
+ │   ├── Error.jsx
+ │   ├── Pagination.jsx
+ │
+ ├── App.jsx
+ ├── App.css
+ ├── main.jsx
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
+npm run dev
+```
+
+App will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌐 URL Pagination
+
+The page number is synced with the URL.
+
+Examples:
+
+```
+/?page=1
+/?page=2
+/?page=3
+```
+
+This allows:
+
+* Refreshing without losing page state
+* Browser back/forward navigation
+* Shareable links
+
+---
+
+## 📡 API Reference
+
+This app uses the public Star Wars API:
+
+```
+https://swapi.dev/api/people
+```
+
+Example paginated request:
+
+```
+https://swapi.dev/api/people/?page=2
+```
+
+---
+
+## 🎯 Future Improvements (Optional)
+
+* Search characters by name
+* Smart pagination (Google style)
+* Skeleton loading cards
+* Keyboard-accessible modal
+* Dark/light theme toggle
+* Animations and page transitions
+* TypeScript support
+
+---
+
+## 👨‍💻 Author
+
+Built as a React practice project to demonstrate:
+
+* API integration
+* Component architecture
+* State management
+* Pagination handling
+* URL synchronization
+
+---
+
+## 📜 License
+
+This project is open source and free to use.
